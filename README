@@ -1,5 +1,12 @@
-This doesn't work yet.
+# Heat standalone
 
-To run:
+Set a VM with build.sh as its launch script, and modify AUTH_URL as appropriate
 
-     ./build.sh
+Attach a floating IP and open port 8004
+
+To use, you'll need to set
+
+    export HEAT_URL=http://[floating_ip_addr]:8004/v1/8a088db117e04a3c8480d9977796f661
+    export OS_NO_CLIENT_AUTH=True
+
+along with the usual stuff in an openrc
