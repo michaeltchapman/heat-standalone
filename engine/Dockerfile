@@ -1,4 +1,4 @@
-FROM michchap/heatbase
+FROM michchap/heatbase:latest
 MAINTAINER "Michael Chapman" <michael@aptira.com>
 
 RUN yum -y install \

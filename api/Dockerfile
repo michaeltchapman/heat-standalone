@@ -6,10 +6,6 @@ RUN yum -y install \
     python-openstackclient \
     && yum clean all
 
-RUN git clone https://github.com/openstack/heat && \
-    cd heat && git checkout stable/juno && \
-    cd contrib/heat_keystoneclient_v2 && \
-    python setup.py install
 
 ADD ./start.sh /start.sh
 
