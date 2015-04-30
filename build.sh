@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
-set -x
+##########################
+# SET YOUR AUTH URL HERE #
+##########################
+
+OS_AUTH_URL=https://us-texas-2.cloud.cisco.com:5000/v2.0
+
+############################
 
 yum install -y epel-release
 yum update -y
