@@ -8,6 +8,11 @@ OS_AUTH_URL=https://us-texas-2.cloud.cisco.com:5000/v2.0
 
 ############################
 
+if [ ${EUID} -ne 0 ] ; then
+    echo "This script should be run as root"
+    exit 1
+fi
+
 yum install -y epel-release
 yum update -y
 
@@ -18,6 +23,9 @@ DB_ROOT_PW=rootdbpass
 HEAT_DB_NAME=heat
 HEAT_DB_USER=heat
 HEAT_DB_PASSWORD=heatdbpass
+
+systemctl enable docker
+systemctl start docker
 
 docker pull rabbitmq
 docker pull mysql
